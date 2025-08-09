@@ -8,7 +8,7 @@ function transferValue({ from, to, amount }) {
   const sender = getUser(from);
   const recipient = getUser(to);
   if (!sender || !recipient) {
-    throw new Error('Sender or recipientfound');
+    throw new Error('Sender or recipient not found');
   }
   if (!recipient.favorecido && amount >= 5000) {
     throw new Error('Transfers above R$ 5.000,00 only allowed to favorecido recipients');
